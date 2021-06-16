@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
+	<ribbon>
+		<tabs>
+			<tab id="helperTab" label="Helper">
+				<group id="catIO" label="Import/Export" imageMso="OpenFolder">
+					<gallery id="fileIO" label="File" size="large">
+						<button id="importFileBtn" label="Import" screentip="Import File" supertip="Import CATOVIS Alignment File" imageMso="ImportExcel" onAction="btn_importFile" />
+						<button id="finishBtn" label="Finish" screentip="Finish" supertip="Finish Alingment" imageMso="DataGraphicTextCallout" onAction="btn_finish" />
+					</gallery>
+					<gallery id="serverIO" label="LS" size="large" imageMso="OpenAttachedMasterPage">
+						<button id="importLSBtn" label="Import from CATOVIS-LS" screentip="Import from LS" supertip="Import TM/TB from CATOVIS LS" imageMso="ServerConnection" onAction="btn_importLS" />
+						<button id="exportLSBtn" label="Export into CATOVIS-LS" screentip="Export into LS" supertip="Export TM/TB into CATOVIS LS" imageMso="ServerRestoreSqlDatabase" onAction="btn_exportLS" />        	
+          			</gallery>
+				</group>
+				<group id="lintHelper" label="Lint">
+					<button id="lintMergeBtn" label="Merge" screentip="Merge cells" imageMso="InsertRowAboveAccess" onAction="btn_merge"></button>
+					<button id="lintSplitBtn" label="Split" screentip="Split cells" imageMso="InsertRowBelow" onAction="btn_split"></button>
+					<button id="lintInsertBtn" label="Insert" screentip="Insert cells" imageMso="InsertRows" onAction="btn_insert"></button>
+					<button id="lintAdjBtn" label="Adjust" screentip="Adjust cells" imageMso="OptionsGeneral" onAction="btn_adjust"></button>
+					<box id="mvBox" boxStyle="vertical">
+						<comboBox id="fileNameCmb"></comboBox>
+						<button id="fileMvBtn" label="Move" onAction="btn_move"></button>
+					</box>
+				</group>
+				<group id="advLint" label="Advanced">
+					<gallery id="cprGly" label="Compare" size="large" imageMso="OpenSharedCalendar">
+						<button id="cprSepBtn" label="In a Separator" screentip="Compare in a Separator" imageMso="PasteByAppendingTable" onAction="btn_comp_sep"></button>
+						<button id="cprFileBtn" label="In a File" screentip="Compare in a File" imageMso="PasteContinueList" onAction="btn_comp_file"></button>
+						<button id="cprWhlBtn" label="Whole File" screentip="Compare Whole File" imageMso="PasteDestinationFormatting" onAction="btn_comp_whole"></button>
+					</gallery>
+					<gallery id="delGly" label="Delete" size="large" imageMso="OutlineUngroup">
+						<button id="delBlkBtn" label="Blank Rows" screentip="Delete lank Rows" imageMso="DeleteRows" onAction="btn_del_blank"></button>
+						<button id="delDplBtn" label="Duplicate Rows" screentip="Delete Duplicate Rows" imageMso="DeleteRows" onAction="btn_del_dupli"></button>
+						<button id="delSameBtn" label="Same Rows" screentip="Delete Same Rows" imageMso="DeleteRows" onAction="btn_del_same"></button>
+						<button id="delDplSameBtn" label="Dupli ^ Same Rows" screentip="Delete Dupli ^ Same Rows" imageMso="DeleteRows" onAction="btn_del_dupli_same"></button>
+					</gallery>
+					<gallery id="buGly" label="Backup" size="large" imageMso="OrganizationChartStyle">
+						<button id="backupBtn" label="Backup" screentip="Create Backup" imageMso="DeleteRows" onAction="btn_backup"></button>
+						<button id="restoreBtn" label="Restore" screentip="Restore from Backup" imageMso=" 	RestorePagePreviousVersion" onAction="btn_restore"></button>
+					</gallery>
+					<button id="dispFormBtn" label="Show Form" size="large" imageMso="OpenStartPage" onAction="btn_showForm"></button>
+				</group>
+      		</tab>
+		</tabs>
+	</ribbon>
+</customUI>
